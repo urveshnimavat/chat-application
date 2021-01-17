@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light text-center">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1 mx-auto">Welcome to my chat app!</span>
+        </div>
+    </nav>
+
+    <div id="messages">
+    </div>
+    <hr>
+    <form id="formMessage">
+        <input id="inputMessage">
+        <input type="submit" id="btnSubmit" class="btn btn-primary">
+    </form>
+    <hr>
+    <button id="shareLocation" class="btn btn-primary">Share Location</button>
+
+    <script id="message-template" type="text/html">
+        <p><strong>{{username}} :</strong> {{message}}  <small><em>  -{{createdAt}}</em></small></p>
+    </script>
+    <script id="welcome-message-template" type="text/html">
+        <p><strong>{{message}}</strong> <small> - {{createdAt}} </small> </p>
+    </script>
+    <script id="location-template" type="text/html">
+        <p>
+            <p><small><em>{{ username }} shared a location</em></small></p>
+            <strong>{{username}} : </strong> <a href="{{url}}" target="_blank">My Location</a> <small><em>  -{{createdAt}}</em></small>
+        </p>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.1.0/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+
+</html>

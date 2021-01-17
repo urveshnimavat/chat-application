@@ -1,0 +1,21 @@
+{
+  "name": "chatApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bad-words": "^3.0.4",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.9",
+    "socket.io": "^3.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
